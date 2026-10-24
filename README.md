@@ -1,19 +1,25 @@
 ﻿<div align="center">
 
-# Faultline
+<img src="logo.png" alt="Faultline — Security Remediation Platform" width="140" />
 
-### Find vulnerabilities. Ship verified fixes. Preserve the evidence.
+Faultline
 
-An open-source security remediation platform focused on reviewable fixes, verification, and evidence.
+Detect the flaw. Engineer the fix. Prove the recovery.
 
-[![Website](https://img.shields.io/badge/Website-Visit%20Faultline-0A7B83?style=for-the-badge&logo=vercel&logoColor=white)](https://faultine.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devloperdevesh/Faultline)
-[![Contributing](https://img.shields.io/badge/Contributing-Join%20the%20Project-2DA44E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devloperdevesh/Faultline/blob/main/CONTRIBUTING.md)
-[![Security](https://img.shields.io/badge/Security-Report%20Responsibly-B42318?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/devloperdevesh/Faultline/blob/main/SECURITY.md)
+Security remediation, verified fixes, and auditable evidence.
+
+Turn security findings into reviewable changes with reproducible verification and traceable evidence.
+
+
+
+
+
+
+<br/>
+
+Find the failure. Fix it with confidence. Verify every change.
 
 </div>
-
----
 
 ## Overview
 
