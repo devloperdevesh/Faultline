@@ -1,89 +1,36 @@
 ﻿<div align="center">
 
-<img src="logo.png" width="96" alt="Faultline Logo">
-
 # Faultline
 
-**Find vulnerabilities. Ship verified fixes. Preserve the evidence.**
+### Find vulnerabilities. Ship verified fixes. Preserve the evidence.
 
-An open-source security remediation project focused on connecting
-vulnerability discovery, remediation, verification, and evidence.
+An open-source security remediation platform focused on reviewable fixes, verification, and evidence.
 
-[Website](https://faultine.vercel.app/) |
-[GitHub](https://github.com/devloperdevesh/Faultline) |
-[Contributing](CONTRIBUTING.md) |
-[Security](SECURITY.md)
+[![Website](https://img.shields.io/badge/Website-Visit%20Faultline-0A7B83?style=for-the-badge&logo=vercel&logoColor=white)](https://faultine.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devloperdevesh/Faultline)
+[![Contributing](https://img.shields.io/badge/Contributing-Join%20the%20Project-2DA44E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devloperdevesh/Faultline/blob/main/CONTRIBUTING.md)
+[![Security](https://img.shields.io/badge/Security-Report%20Responsibly-B42318?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/devloperdevesh/Faultline/blob/main/SECURITY.md)
 
 </div>
 
 ---
 
-## Why Faultline?
+## Overview
 
-Security scanners identify potential vulnerabilities, but developers still
-need to understand findings, review fixes, and check whether those fixes work.
+Faultline aims to connect vulnerability discovery with reviewable remediation proposals, verification, and evidence reporting.
 
-Faultline aims to connect these steps in one developer-focused workflow.
+### Intended workflow
 
-- **Actionable findings:** Organize issues for review and prioritization.
-- **Reviewable remediation:** Keep developers in control of proposed changes.
-- **Verification-focused:** Re-run relevant checks and record the outcomes.
-- **Evidence-oriented:** Connect findings, changes, and verification results.
-- **Open development:** Make the project available for inspection and contribution.
+1. **Discovery** — collect vulnerability findings from scanner integrations.
+2. **Normalization** — represent findings consistently.
+3. **Prioritization** — help reviewers assess severity and urgency.
+4. **Remediation** — prepare fixes for human review.
+5. **Verification** — evaluate proposed changes against original findings.
+6. **Evidence** — preserve verification results and supporting reports.
 
-## Why Open Source?
+> Early development: features are not considered implemented until their code and behavior have been tested.
 
-Security tooling benefits from transparency, reproducibility, and community
-review.
-
-Faultline is being developed with an open-source-first approach. Contributors
-can help improve integrations, testing, remediation workflows, and documentation.
-
-Our principles are transparent behavior, human review, reproducible tests,
-and honest reporting of limitations.
-
-## Our Moat
-
-**Our long-term ambition is to make security remediation verifiable, not
-merely detectable.**
-
-Faultline aims to connect four capabilities:
-
-1. Finding context and prioritization.
-2. Reviewable remediation proposals.
-3. Verification against the original finding.
-4. An evidence trail linking findings, changes, and results.
-
-Over time, reliable integrations, reproducible remediation tests, and
-real-world developer feedback could strengthen this workflow.
-
-This is the intended product differentiation, not a claim that a defensible
-competitive moat has already been established.
-
-## Intended Workflow
-
-| Stage | Purpose |
-|---|---|
-| Scan | Discover security issues with supported tools |
-| Prioritize | Organize findings by severity and context |
-| Remediate | Propose changes for developer review |
-| Verify | Re-run relevant checks and record outcomes |
-| Evidence | Preserve findings and verification artifacts |
-
-These stages describe the intended workflow. Only implemented and tested
-capabilities should be presented as available features.
-
-## Security Principles
-
-- Treat uploaded archives and repositories as untrusted input.
-- Prevent archive path traversal and unsafe command execution.
-- Apply time and resource limits to scanner jobs.
-- Keep credentials out of source code and logs.
-- Require human review of proposed changes.
-- Document network access and data retention.
-- Distinguish suggested fixes from successfully verified fixes.
-
-## Project Structure
+## Repository Structure
 
 ```text
 Faultline/
@@ -123,38 +70,109 @@ Faultline/
 ├── CHANGELOG.md
 ├── LICENSE
 └── README.md
+```
 
-Roadmap
+Some directories and modules are scaffolding and may not yet contain implemented functionality.
 
-Working backend API and automated tests
+## Current Status
 
-Frontend application setup
+- [x] Initial FastAPI application
+- [x] Root endpoint
+- [x] Health endpoint
+- [x] Two automated API tests passing locally
+- [x] Ruff lint checks passing locally
+- [ ] Continuous integration workflow verified
+- [ ] Database integration
+- [ ] Authentication and authorization
+- [ ] Scanner integrations
+- [ ] Finding prioritization
+- [ ] Remediation proposal workflow
+- [ ] Verification and evidence reports
+- [ ] Frontend application
+- [ ] Security testing and deployment hardening
 
-Scanner integrations and finding normalization
+## Getting Started
 
-Finding prioritization
+### Requirements
 
-Reviewable remediation proposals
+- Python 3.11 or another explicitly supported Python version
+- Git
+- pip
 
-Verification against original findings
+### Clone and install
 
-Evidence report generation
+```powershell
+git clone https://github.com/devloperdevesh/Faultline.git
+Set-Location Faultline
 
-Continuous integration and security testing
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+python -m pip install -r backend/requirements.txt
+```
+
+### Run the API
+
+```powershell
+$env:PYTHONPATH = "$PWD\backend"
+python -m uvicorn app.main:app --reload --app-dir backend
+```
+
+Local endpoints:
+
+- API root: `http://127.0.0.1:8000/`
+- Health: `http://127.0.0.1:8000/health`
+- API documentation: `http://127.0.0.1:8000/docs`
+
+### Run tests and lint
+
+```powershell
+$env:PYTHONPATH = "$PWD\backend"
+python -m ruff check backend/app tests
+python -m pytest tests -v
+```
+
+Passing local checks does not establish production readiness.
+
+## Roadmap
+
+1. Working backend API and automated tests
+2. Frontend application setup
+3. Scanner integrations and finding normalization
+4. Finding prioritization
+5. Reviewable remediation proposals
+6. Verification against original findings
+7. Evidence report generation
+8. Continuous integration and security testing
 
 Roadmap items remain planned until implemented and verified.
 
-Contributing
+## Contributing
 
-Contributions are welcome. Read CONTRIBUTING.md, inspect
-the existing implementation, and open an issue before major changes.
+Contributions are welcome.
 
-Security
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md).
+2. Inspect the existing implementation.
+3. Open an issue before major changes.
+4. Create a focused branch and add tests for behavior changes.
+5. Submit a pull request describing the change and checks performed.
 
-Please report vulnerabilities responsibly. Read SECURITY.md.
-Do not publish credentials, private source code, or sensitive findings.
+## Security
 
-License
+Please report vulnerabilities responsibly. Read [SECURITY.md](SECURITY.md).
 
-Add the complete text of the chosen license to LICENSE before claiming
-that the project is distributed under that license.
+Do not publish credentials, API keys, private source code, or sensitive vulnerability findings in public issues or pull requests.
+
+## License
+
+The `LICENSE` file must contain the complete text of the chosen license before claiming that this project is distributed under that license. An empty license file does not grant open-source license permissions.
+
+---
+
+<div align="center">
+
+**Faultline** — make remediation reviewable, verifiable, and evidence-driven.
+
+[Website](https://faultine.vercel.app/) · [GitHub](https://github.com/devloperdevesh/Faultline) · [Issues](https://github.com/devloperdevesh/Faultline/issues)
+
+</div>
