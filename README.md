@@ -1,40 +1,90 @@
-﻿<div align="center">
+ <div align="center">
 
-<img src="logo.png" alt="Faultline — Security Remediation Platform" width="140" />
+<img src="logo.png" alt="Faultline" width="132" />
 
-Faultline
+# FAULTLINE
 
-Detect the flaw. Engineer the fix. Prove the recovery.
+### From vulnerability findings to verified remediation.
 
-Security remediation, verified fixes, and auditable evidence.
+**Find the weakness. Engineer the fix. Verify the outcome.**
 
-Turn security findings into reviewable changes with reproducible verification and traceable evidence.
+An open-source security remediation platform designed to connect vulnerability discovery, reviewable fixes, verification, and auditable evidence.
 
-
-
-
-
+[![Website](https://img.shields.io/badge/WEBSITE-Explore%20Faultline-0F766E?style=for-the-badge&logo=vercel&logoColor=white)](https://faultine.vercel.app/)
+[![GitHub](https://img.shields.io/badge/SOURCE-Open%20Source-24292F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devloperdevesh/Faultline)
+[![Contributing](https://img.shields.io/badge/CONTRIBUTIONS-Welcome-2563EB?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devloperdevesh/Faultline/blob/main/CONTRIBUTING.md)
+[![Security](https://img.shields.io/badge/SECURITY-Responsible%20Disclosure-B91C1C?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/devloperdevesh/Faultline/blob/main/SECURITY.md)
 
 <br/>
 
-Find the failure. Fix it with confidence. Verify every change.
+*Discover the risk. Review the remediation. Trust the verification.*
 
 </div>
 
+---
+
 ## Overview
 
-Faultline aims to connect vulnerability discovery with reviewable remediation proposals, verification, and evidence reporting.
+Security findings are only the starting point. The harder challenge is turning them into **reviewable changes with verifiable outcomes and traceable evidence**.
 
-### Intended workflow
+Faultline aims to connect the security remediation lifecycle in one workflow — from collecting vulnerability findings to evaluating proposed fixes and preserving verification results.
 
-1. **Discovery** — collect vulnerability findings from scanner integrations.
-2. **Normalization** — represent findings consistently.
-3. **Prioritization** — help reviewers assess severity and urgency.
-4. **Remediation** — prepare fixes for human review.
-5. **Verification** — evaluate proposed changes against original findings.
-6. **Evidence** — preserve verification results and supporting reports.
+## The Remediation Lifecycle
 
-> Early development: features are not considered implemented until their code and behavior have been tested.
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 01 / Discover
+
+Collect vulnerability findings from integrated security scanners.
+
+</td>
+<td width="50%" valign="top">
+
+### 02 / Normalize
+
+Represent findings in a consistent format for downstream processing.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 03 / Prioritize
+
+Help reviewers assess severity, urgency, and remediation priorities.
+
+</td>
+<td width="50%" valign="top">
+
+### 04 / Remediate
+
+Prepare proposed fixes that developers can inspect and review.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 05 / Verify
+
+Evaluate proposed changes against the original findings.
+
+</td>
+<td width="50%" valign="top">
+
+### 06 / Preserve Evidence
+
+Keep verification outcomes and supporting reports traceable.
+
+</td>
+</tr>
+</table>
+
+> **Development status:** Faultline is under active development. Workflow stages describe the intended design; a capability should be considered implemented only after its code and behavior have been tested.
+
+
 
 ## Repository Structure
 
